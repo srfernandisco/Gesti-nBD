@@ -4,8 +4,6 @@ import java.awt.Button;
 import java.awt.Dialog;
 import java.awt.FlowLayout;
 import java.awt.Frame;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
 import java.awt.Label;
 import java.awt.TextField;
 import java.awt.event.WindowAdapter;
@@ -24,8 +22,6 @@ public class Login extends Dialog {
 	public static final String COMANDO_LIMPIAR = "LoginLimpiar";
 
 	private Label labelusuario;
-	private GridBagConstraints constraints;
-	// constraints.gridx=0;
 	private Label labelcontrasena;
 	private Button btnAceptar;
 	private Button btnLimpiar;
@@ -38,8 +34,7 @@ public class Login extends Dialog {
 		setLayout(new FlowLayout());
 
 		labelusuario = new Label("Usuario");
-		constraints = new GridBagConstraints();
-		// constraints.gridx=0;
+	
 		labelcontrasena = new Label("Contraseña");
 		btnAceptar = new Button("Aceptar");
 		btnLimpiar = new Button("Limpiar");

@@ -52,20 +52,28 @@ public class AyudanteBD extends Conexion {
 	 * @param passwd
 	 * @return si existen
 	 */
-	public  boolean login(String user, String passwd) {
+	public  Usuario login(String user, String passwd) {
 		boolean existe=false;
+		Usuario usuario = new Usuario();
 		try {
 			PreparedStatement sentencia = getConexion().prepareStatement(
 					CONSULTAR_USUARIO);
 			sentencia.setString(1, user);
 			sentencia.setString(2, passwd);
 			ResultSet rs = sentencia.executeQuery(); 
-			existe= rs.next();
+			if(rs.next()){
+				usuario = new 
+						Usuario(rs.getInt("idUsuario"),
+								rs.getString("NOMBREUSUARIO"),
+								rs.getString("passwordUsuario"),
+								rs.getString("tipoUsuario"));
+			}
+			
 		} catch (SQLException e) {
 			System.err.println("Error en la sentencia SQL: "+e.getMessage());
 
 		}
-		return existe;		
+		return usuario;		
 	}
 
     /**

@@ -9,14 +9,14 @@ public class Usuario implements Serializable{
 
 	
 	private static final long serialVersionUID = 1L;
-	private int  id;
+	private int  idUsuario;
 	private String nombreUsuario;
 	private String passwordUsuario;
 	private String tipoUsuario;
 	
 	public Usuario() {
 		super();
-		id = 0;
+		idUsuario = 0;
 		nombreUsuario = "";
 		passwordUsuario = "";
 		tipoUsuario = "";
@@ -25,18 +25,18 @@ public class Usuario implements Serializable{
 	
 	public Usuario(int id, String nombreUsuario, String passwordUsuario, String tipoUsuario) {
 		super();
-		this.id = id;
+		this.idUsuario = id;
 		this.nombreUsuario = nombreUsuario;
 		this.passwordUsuario = passwordUsuario;
 		this.tipoUsuario = tipoUsuario;
 	}
 
 	public int getId() {
-		return id;
+		return idUsuario;
 	}
 	
 	public void setId(int id) {
-		this.id = id;
+		this.idUsuario = id;
 	}
 	public String getNombreUsuario() {
 		return nombreUsuario;
@@ -63,6 +63,14 @@ public class Usuario implements Serializable{
 			this.tipoUsuario = tipoUsuario;
 		else tipoUsuario = "";
 	}
+
+
+	@Override
+	public String toString() {
+		return "Usuario [idUsuario=" + idUsuario + ", nombreUsuario=" + nombreUsuario + ", passwordUsuario="
+				+ passwordUsuario + ", tipoUsuario=" + tipoUsuario + "]";
+	}
+	
 	
 	
 	
