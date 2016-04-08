@@ -6,12 +6,22 @@ import java.awt.GridLayout;
 import java.awt.Label;
 import java.awt.Panel;
 import java.awt.TextField;
+import java.util.ArrayList;
+
+import es.studium.Practica1GestionBD.modelo.Usuario;
 
 public class VistaUsuario extends Panel{
 	
 	
 	public static final String CM_BORRAR_USER = "Borrar";
 	public static final String CM_NUEVO_USER = "Nuevo";
+	public static final String CM_PRIMERO= "btnPrimero";
+	public static final String CM_SIGUIENTE= "btnSiguiente";
+	public static final String CM_ANTERIOR= "btnAnterior";
+	public static final String CM_ULTIMO= "btnUltimo";
+	
+	
+	
 	private static final int ALTO = 700;
 	private static final int ANCHO = 300;
 

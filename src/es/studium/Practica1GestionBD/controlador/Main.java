@@ -13,6 +13,6 @@ public class Main {
 		VistaUsuario vistausuario=new VistaUsuario();
 		Controlador controlador= new Controlador(vistamenu,ayudantebd,vistausuario);
 		vistamenu.conectaControlador(controlador);
-		
+
 	}
 }

@@ -9,8 +9,10 @@ import java.awt.MenuItem;
 import java.awt.Panel;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.util.ArrayList;
 
 import es.studium.Practica1GestionBD.controlador.Controlador;
+import es.studium.Practica1GestionBD.modelo.Usuario;
 
 public class MenuPrincipal extends Frame {
 	
@@ -29,6 +31,8 @@ public class MenuPrincipal extends Frame {
 	private Panel panelPrincipal, panel2;
 	private VistaUsuario panelVistaUsuario;
 	private CardLayout layoutPanelPrincipal;
+	
+
 	
 	// En primer lugar creamos la barra de menú
 	MenuBar barraMenu = new MenuBar();
@@ -150,6 +154,17 @@ public class MenuPrincipal extends Frame {
 		panelVistaUsuario.getBtnBorrar().addActionListener(controlador);
 		panelVistaUsuario.getBtnBorrar().setActionCommand(VistaUsuario.CM_BORRAR_USER);
 		
+		panelVistaUsuario.getBtnAnterior().addActionListener(controlador);
+		panelVistaUsuario.getBtnAnterior().setActionCommand(VistaUsuario.CM_ANTERIOR);
+		
+		panelVistaUsuario.getBtnSiguiente().addActionListener(controlador);
+		panelVistaUsuario.getBtnSiguiente().setActionCommand(VistaUsuario.CM_SIGUIENTE);
+		
+		panelVistaUsuario.getBtnPrimero().addActionListener(controlador);
+		panelVistaUsuario.getBtnPrimero().setActionCommand(VistaUsuario.CM_PRIMERO);
+		
+		panelVistaUsuario.getBtnUltimo().addActionListener(controlador);
+		panelVistaUsuario.getBtnUltimo().setActionCommand(VistaUsuario.CM_ULTIMO);
 		
 		
 		
